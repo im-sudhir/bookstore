@@ -8,6 +8,14 @@ services:
       - 8000:8000
     depends_on:
       - db
+    environment:
+      - DJANGO_SECRET_KEY=django-insecure-zr%$$o7(s3sd1py_rj7ug&p)yg29v_nrqet+3j$$+p+yu0lq8p2n
+      - DJANGO_DEBUG=True
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
 
   db:
     image: postgres:14
